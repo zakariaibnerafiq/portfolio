@@ -18,7 +18,6 @@ body{
 .card{
     border: 1px solid #2c2c2c;
     border-radius: 10px;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
