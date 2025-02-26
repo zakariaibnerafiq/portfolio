@@ -1,0 +1,15 @@
+@keyframes draw-line {
+    from {
+        stroke-dasharray: 0, 100%;
+    }
+
+    to {
+        stroke-dasharray: 100%, 0;
+    }
+}
+
+.animate-draw-line {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: draw-line 1.5s ease-out forwards;
+}
