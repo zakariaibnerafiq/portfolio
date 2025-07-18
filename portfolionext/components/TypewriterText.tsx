@@ -37,7 +37,7 @@ export default function TypewriterText({ text, delay = 1000, speed = 100 }: Type
   }, [])
 
   return (
-    <span className="relative">
+    <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
       {displayText}
       <motion.span animate={{ opacity: showCursor ? 1 : 0 }} className="inline-block w-1 h-full bg-blue-400 ml-1">
         |
