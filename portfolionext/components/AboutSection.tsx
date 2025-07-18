@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import SkillOrb from "./SkillOrb"
 
@@ -269,7 +267,7 @@ export default function AboutSection() {
                       >
                         <h4 className="text-xl font-semibold text-blue-400 mb-2">Bachelor of Computer Science</h4>
                         <p className="text-slate-300 font-medium">BRAC University</p>
-                        <p className="text-sm text-slate-400 mt-1">Expected: August 2025</p>
+                        <p className="text-sm text-slate-400 mt-1">Expected: October 2025</p>
                         <div className="mt-3 flex flex-wrap gap-2 justify-end md:justify-start">
                           <span className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded-full">Current</span>
                         </div>

@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import ProjectCard from "./ProjectCard"
 
@@ -7,13 +5,13 @@ export default function ProjectsSection() {
   const projectsData = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Online Car Showroom",
       description:
-        "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, inventory management, and real-time order tracking.",
-      image: "/placeholder.svg?height=300&width=400",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe", "Redux", "Express"],
+        "This is a React-based web application for an online car showroom, where users can explore and browse different car models available for sale.",
+      image: "/onlinecarshowroom.png?height=300&width=400",
+      tech: ["React", "Node.js", "MySQL", "Express"],
       links: {
-        github: "https://github.com/zakariaibnerafiq/ecommerce-platform",
+        github: "https://github.com/zakariaibnerafiq/Online-Car-Showroom",
         demo: null, // Set to null if no demo available
         live: null, // Set to null if no live site available
       },
@@ -22,33 +20,33 @@ export default function ProjectsSection() {
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "Nest Navigator",
       description:
-        "Collaborative task management application with real-time updates, team collaboration features, file sharing, and advanced project analytics dashboard.",
-      image: "/placeholder.svg?height=300&width=400",
-      tech: ["Next.js", "Socket.io", "MongoDB", "Tailwind", "Prisma", "TypeScript"],
+        "A real estate management application streamlines the process of managing properties, offering a user-friendly interface for both property owners and tenants.",
+      image: "/nestnavigator.png?height=300&width=400",
+      tech: ["React", "SCSS", "MySQL", "Go"],
       links: {
-        github: "https://github.com/zakariaibnerafiq/task-manager",
-        demo: "https://zakariaibnerafiq.github.io/task-manager-demo",
-        live: null,
-      },
-      featured: true,
-      category: "Frontend",
-    },
-    {
-      id: 3,
-      title: "AI Chat Interface",
-      description:
-        "Modern chat interface with AI integration, voice support, multi-language translation, and advanced conversation analytics with beautiful UI/UX design.",
-      image: "/placeholder.svg?height=300&width=400",
-      tech: ["React", "OpenAI", "WebRTC", "Express", "Python", "TensorFlow"],
-      links: {
-        github: "https://github.com/zakariaibnerafiq/ai-chat-interface",
+        github: "https://github.com/zakariaibnerafiq/RealEstateManagementProject",
         demo: null,
         live: null,
       },
       featured: true,
-      category: "AI/ML",
+      category: "Full Stack",
+    },
+    {
+      id: 3,
+      title: "ThesisX",
+      description:
+        "Thesis X is a collaborative platform designed for university students and faculty to streamline the process of managing along with selecting thesis supervisors and co-supervisors for thesis.",
+      image: "/thesisx.png?height=300&width=400",
+      tech: ["React", "TailwindCSS", "Socket-io","PostgreSQL", "Prisma ORM", "Express", "LLama"],
+      links: {
+        github: "https://github.com/Fahmid-Chowdhury/ThesisX",
+        demo: null,
+        live: null,
+      },
+      featured: true,
+      category: "Full Stack",
     },
     
   ]

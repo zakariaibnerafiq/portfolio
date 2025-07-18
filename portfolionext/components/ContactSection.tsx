@@ -232,7 +232,7 @@ export default function ContactSection() {
               boxShadow: "0 20px 40px rgba(236, 72, 153, 0.15)",
             }}
             whileTap={{ scale: 0.95 }}
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/sapphire1080/"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative backdrop-blur-xl bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-pink-500/30 transition-all duration-300 overflow-hidden"
@@ -252,14 +252,14 @@ export default function ContactSection() {
               <h3 className="text-xl font-semibold text-white mb-2">LinkedIn</h3>
               <p className="text-slate-400 text-sm leading-relaxed">Connect with me for professional networking</p>
               <div className="mt-4 text-pink-400 text-sm font-medium group-hover:text-pink-300 transition-colors">
-                linkedin.com/in/yourprofile
+                linkedin.com/in/sapphire1080/
               </div>
             </div>
           </motion.a>
         </motion.div>
 
         {/* Bottom CTA */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -275,7 +275,7 @@ export default function ContactSection() {
           >
             ✨ Always excited to discuss new opportunities ✨
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   )

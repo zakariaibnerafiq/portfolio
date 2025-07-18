@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { Github, Eye, Globe, Play } from "lucide-react"
 import Image from "next/image"
@@ -31,7 +29,6 @@ export default function ProjectCard({
   category,
   index = 0,
 }: ProjectCardProps) {
-  // Get available action buttons based on provided links
   const getActionButtons = () => {
     const buttons = []
 
@@ -79,12 +76,10 @@ export default function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="group relative"
+      className="group relative h-full flex flex-col"
     >
-      {/* Enhanced glow effect */}
+      {/* Glow effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-      {/* Secondary glow for depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-3xl blur-2xl opacity-0 group-hover:opacity-60 transition-opacity duration-700"></div>
 
       <motion.div
@@ -93,7 +88,7 @@ export default function ProjectCard({
           scale: 1.02,
         }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="relative backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 shadow-2xl overflow-hidden hover:border-white/20 transition-all duration-300 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]"
+        className="relative backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 shadow-2xl overflow-hidden hover:border-white/20 transition-all duration-300 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] flex flex-col h-full"
       >
         {/* Category Badge */}
         <div className="absolute top-4 left-4 z-20">
@@ -107,14 +102,14 @@ export default function ProjectCard({
           </motion.span>
         </div>
 
-        {/* Image Section with enhanced overlay */}
+        {/* Image Section */}
         <div className="relative h-64 overflow-hidden">
           <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.6 }} className="absolute inset-0">
             <Image src={image || "/placeholder.svg?height=300&width=400"} alt={title} fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
           </motion.div>
 
-          {/* Enhanced hover overlay with action buttons */}
+          {/* Hover overlay with action buttons */}
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1 }}
@@ -154,33 +149,21 @@ export default function ProjectCard({
               )
             })}
           </motion.div>
-
-          {/* Project status indicator */}
-          <motion.div
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.7, 1, 0.7],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
-            className="absolute top-4 right-4 w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full shadow-lg ring-2 ring-white/20"
-          />
         </div>
 
-        {/* Enhanced Content Section */}
-        <div className="p-8">
-          {/* Title with enhanced hover effect */}
+        {/* Content Section */}
+        <div className="p-8 pb-0 flex flex-col">
+          {/* Title */}
           <motion.h3 className="text-2xl font-bold mb-4 group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
             {title}
           </motion.h3>
 
-          {/* Description with better typography */}
-          <motion.p className="text-slate-300 mb-6 leading-relaxed text-base line-clamp-3">{description}</motion.p>
+          {/* Description */}
+          <motion.p className="text-slate-300 mb-6 leading-relaxed text-base line-clamp-4">
+            {description}
+          </motion.p>
 
-          {/* Enhanced Tech Stack with better animations */}
+          {/* Tech Stack */}
           <div className="mb-6">
             <h4 className="text-sm font-semibold text-slate-400 mb-3 uppercase tracking-wider">Technologies</h4>
             <div className="flex flex-wrap gap-2">
@@ -206,7 +189,9 @@ export default function ProjectCard({
             </div>
           </div>
 
-          {/* Enhanced Action Buttons */}
+        </div>
+        {/* Action Buttons - Pushed to bottom */}
+        <div className="mt-auto p-8 pt-0"> {/* Added mt-auto and pt-4 for spacing */}
           <div className="flex gap-3">
             {actionButtons.length > 0 ? (
               actionButtons.map((button, buttonIndex) => {
@@ -222,12 +207,12 @@ export default function ProjectCard({
                       boxShadow: `0 8px 25px ${button.shadowColor}`,
                     }}
                     whileTap={{ scale: 0.98 }}
-                    className={`group/cta relative flex-1 py-3 px-4 bg-gradient-to-r ${button.gradient} rounded-2xl font-semibold text-white shadow-lg overflow-hidden transition-all duration-300 border border-white/10`}
+                    className={`group/cta relative flex-1 py-3 px-4 bg-gradient-to-r ${button.gradient} rounded-2xl font-semibold text-white shadow-lg overflow-hidden transition-all duration-300 border border-white/10 min-w-0`} // Added min-w-0
                   >
                     <div
                       className={`absolute inset-0 bg-gradient-to-r ${button.hoverGradient} opacity-0 group-hover/cta:opacity-100 transition-opacity duration-300`}
                     ></div>
-                    <span className="relative z-10 flex items-center justify-center gap-2 text-sm">
+                    <span className="relative z-10 flex items-center justify-center gap-2 text-sm truncate"> {/* Added truncate */}
                       <IconComponent size={16} />
                       {button.label}
                     </span>
@@ -245,7 +230,7 @@ export default function ProjectCard({
           </div>
         </div>
 
-        {/* Enhanced decorative elements */}
+        {/* Decorative elements */}
         <motion.div
           animate={{
             rotate: [0, 360],
@@ -271,7 +256,7 @@ export default function ProjectCard({
           className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-r from-pink-400 to-blue-500 rounded-full opacity-15 blur-sm"
         />
 
-        {/* Subtle inner glow */}
+        {/* Inner glow */}
         <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none" />
       </motion.div>
     </motion.div>
