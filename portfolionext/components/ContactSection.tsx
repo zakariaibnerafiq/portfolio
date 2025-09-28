@@ -232,7 +232,7 @@ export default function ContactSection() {
               boxShadow: "0 20px 40px rgba(236, 72, 153, 0.15)",
             }}
             whileTap={{ scale: 0.95 }}
-            href="https://www.linkedin.com/in/sapphire1080/"
+            href="https://www.linkedin.com/in/zakariaibnerafiq/"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative backdrop-blur-xl bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-pink-500/30 transition-all duration-300 overflow-hidden"
