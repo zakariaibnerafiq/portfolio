@@ -252,7 +252,7 @@ export default function ContactSection() {
               <h3 className="text-xl font-semibold text-white mb-2">LinkedIn</h3>
               <p className="text-slate-400 text-sm leading-relaxed">Connect with me for professional networking</p>
               <div className="mt-4 text-pink-400 text-sm font-medium group-hover:text-pink-300 transition-colors">
-                linkedin.com/in/sapphire1080/
+                linkedin.com/in/zakariaibnerafiq/
               </div>
             </div>
           </motion.a>
